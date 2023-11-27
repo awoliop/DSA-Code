@@ -137,3 +137,109 @@ test.push("FOUR");
 // test.shift();
 console.log(test);
 console.log(test.get(2));
+
+class linkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+  push(val) {
+    let newNode2 = new Node(val);
+    if (!this.head) {
+      this.head = newNode2;
+      this.tail = this.head;
+      // this.length++;
+    }
+
+    this.tail.next = newNode2;
+    this.tail = this.tail.next;
+    this.length++;
+
+    return this;
+  }
+
+  pop() {
+    if (!this.head) {
+      return undefined;
+    }
+
+    // if (this.length == 1) {
+    //   this.head = null;
+    //   this.tail = null;
+    //   this.length--;
+    // }
+
+    let current = this.head;
+    let previous = this.head;
+    while (current.next) {
+      previous = current;
+      current = current.next;
+    }
+    let del = current;
+    this.tail = previous;
+    this.tail.next = null;
+    this.length--;
+    if (this.length == 0) {
+      this.head = null;
+      this.tail = null;
+    }
+    return [del, this];
+  }
+  unshift(val) {
+    let newNode4 = new Node(val);
+    if (!this.head) {
+      this.head = newNode4;
+      this.tail = newNode4;
+    } else {
+      newNode4.next = this.head;
+      this.head = newNode4;
+    }
+
+    this.length++;
+    return this;
+  }
+
+  shift() {
+    if (!this.head) {
+      return undefined;
+    }
+    if (this.length == 1) {
+      this.head = null;
+      this.tail = null;
+      this.length--;
+      return this;
+    }
+
+    this.head = this.head.next;
+    this.length--;
+    return this;
+  }
+  get(index) {
+    if (this.length == 0 || index >= this.length) {
+      return null;
+    }
+
+    let counter = 0;
+    let current = this.head;
+
+    while (counter < index) {
+      current = current.next;
+      counter++;
+    }
+    if (counter == index) {
+      return current.val;
+    }
+  }
+}
+
+let test3 = new linkedList();
+
+test3.push("ONEE");
+test3.push("TWOO");
+test3.push("THREE");
+// test3.unshift("ZERO");
+// test3.shift();
+// test3.shift();
+console.log(test3);
+console.log(test3.get(1));
