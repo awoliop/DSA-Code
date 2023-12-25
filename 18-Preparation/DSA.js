@@ -32,28 +32,26 @@ function maxSubArray(nums, k) {
 
 console.log(maxSubArray([1, 2, 3, 4, 5, 6, 7], 3));
 
-function divisorSubstring(num, k) {
-  let arr = num.toString();
-  let digits = arr.split("");
-  let counter = 0;
-  let windowStart = 0;
+function divisioncheckre(n, k) {
+  let numString = n.toString();
+  let arr = numString.split("");
   let former = "";
-  for (let windowEnd = 0; windowEnd < digits.length; windowEnd++) {
-    former += digits[windowEnd];
-    if (windowEnd >= k - 1) {
-      // convert former to number under numbered varibale
-      let numbered = parseInt(former);
-      if (num % numbered === 0) {
+  let counter = 0;
+  for (let i = 0; i < arr.length; i++) {
+    former += arr[i];
+    if (i >= k - 1) {
+      if (n % parseInt(former) == 0) {
         counter++;
+        former.substring(1);
+        // ➡️➡️ Another option
+        // former.split("");
+        // former.shift();
+        // former.join("");
       }
-      // split former into array and remove first element
-      let formerArr = former.split("");
-      formerArr.shift();
-      former = formerArr.join("");
-      // console.log(former);
     }
   }
+
   return counter;
 }
 
-console.log(divisorSubstring(430043, 2));
+console.log(divisioncheckre(430043, 2));

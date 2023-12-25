@@ -1,0 +1,13 @@
+{
+  "name": "dsa-code",
+  "version": "1.0.0",
+  "description": "this is a code that i used to learn DSA(Data strudctures and Algorithisms) in JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon queue.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}
