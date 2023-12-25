@@ -243,3 +243,6 @@ test3.push("THREE");
 // test3.shift();
 console.log(test3);
 console.log(test3.get(1));
+
+
+// checking if it works
