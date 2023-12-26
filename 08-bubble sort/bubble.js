@@ -54,7 +54,7 @@ console.log(string1.sort(compareLengthDOWN));
 
 /* 
  ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
-  ➡️➡️BUBBLE SORT⬅️⬅️     (THE LARGEST LEMENT WILL BUBBLE UPTO THE END TO THE ARRAY WITH EVERY ITERATION!!)
+  ➡️➡️BUBBLE SORT⬅️⬅️     (THE LARGEST ELEMENT WILL BUBBLE UPTO THE END TO THE ARRAY WITH EVERY ITERATION!!)
  ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️
  */
 function bubbleSort(arr) {
@@ -72,7 +72,7 @@ function bubbleSort(arr) {
 }
 console.log(bubbleSort([2, 45, 1, 45, 66, 22, 76, 12]));
 
-// our bubble sort is to sort an unsorted set of data but if our data is an almost sorted we shoudl optimize it so we dont waste unnesecary energy!!..as follow
+// our bubble sort is to sort an unsorted set of data but if our data is an almost sorted we should optimize it so we dont waste unnesecary energy!!..as follow
 
 function bubbleSortOptimized(arr) {
   /*🔥🔥🔥
@@ -106,7 +106,8 @@ USE THE BUBBLE SORT  IF YOU KNOW YOU DATA IS FARLY SORTED!!...IT IS POSSIBLY GOO
 
 function bubbleSort1(arr) {
   let noswap;
-  let counter = 0;
+
+  // let counter = 0;
 
   for (let i = arr.length; i > 0; i--) {
     noswap = true;
@@ -117,7 +118,7 @@ function bubbleSort1(arr) {
         noswap = false;
       }
     }
-    if (!noswap) counter++;
+    // if (!noswap) counter++;
   }
   return arr;
 }
