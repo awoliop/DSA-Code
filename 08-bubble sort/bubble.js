@@ -54,8 +54,7 @@ console.log(string1.sort(compareLengthDOWN));
 
 /* 
  ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
-  ➡️➡️BUBBLE SORT⬅️⬅️     (THE LARGEST ELEMENT WILL BUBBLE UPTO THE END TO THE ARRAY WITH EVERY ITERATION!!)
- ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️
+   BUBBLE SORT      (THE LARGEST ELEMENT WILL BUBBLE UPTO THE END TO THE ARRAY WITH EVERY ITERATION!!)
  */
 function bubbleSort(arr) {
   // we are using a decrementing loop because we want to shrink the loop with every iteration as it will already be sorted at the end of the array(bubbling big values to the end!!
@@ -103,24 +102,3 @@ console.log(bubbleSortOptimized([2, 45, 1, 45, 66, 22, 76, 12]));
 /*
 USE THE BUBBLE SORT  IF YOU KNOW YOU DATA IS FARLY SORTED!!...IT IS POSSIBLY GOOD CANDIDATE!!
 */
-
-function bubbleSort1(arr) {
-  let noswap;
-
-  // let counter = 0;
-
-  for (let i = arr.length; i > 0; i--) {
-    noswap = true;
-    for (let j = 0; j < i - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        // Swapping
-        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-        noswap = false;
-      }
-    }
-    // if (!noswap) counter++;
-  }
-  return arr;
-}
-
-console.log(bubbleSort1([2, 45, 1, 45, 66, 22, 76, 12]));

@@ -9,7 +9,7 @@ let instructor = {
 console.log(Object.keys(instructor));
 console.log(Object.entries(instructor));
 console.log(Object.values(instructor));
-// tellsus if such property exists in the object with boolean value!!.
+// tellsus if such property exists in the object with boolean valuewindow!!.
 
 /**
  * The time complexity of the code instructor.hasOwnProperty("firstname") is O(1) because it directly checks if the property "firstname" exists in the instructor object. It does not depend on the size of the object or the number of properties it has.

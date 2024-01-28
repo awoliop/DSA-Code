@@ -244,5 +244,6 @@ test3.push("THREE");
 console.log(test3);
 console.log(test3.get(1));
 
-
 // checking if it works
+
+function SelctionSort(arr) {}
